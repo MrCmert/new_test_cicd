@@ -2,6 +2,11 @@ pipeline {
    agent any
 
    stages {
+      stage('install req') {
+            steps {
+            sh 'pip install -r requirments.txt'
+            }
+         }
 
       stage('runpy') {
         steps{      
